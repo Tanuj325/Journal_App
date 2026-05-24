@@ -1,8 +1,10 @@
 package com.tanuj.Spring.Boot.controller;
 
 
+import com.tanuj.Spring.Boot.api_response.WeatherResponse;
 import com.tanuj.Spring.Boot.entity.User;
 import com.tanuj.Spring.Boot.service.UserService;
+import com.tanuj.Spring.Boot.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private WeatherService weatherService;
 
 
     @PutMapping
@@ -39,6 +44,17 @@ public class UserController {
         String userName = authentication.getName();
         userService.deleteByUserName(userName);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping
+    public ResponseEntity<?> greetings() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        WeatherResponse weatherResponse = weatherService.getWeather("Mumbai");
+        String greeting="";
+        if(weatherResponse!=null){
+            greeting = " Weather feels like "+weatherResponse.getCurrent().getFeelsLike();
+        }
+        return new ResponseEntity<>("Hi "+authentication.getName()+greeting,HttpStatus.OK);
     }
 
 }
