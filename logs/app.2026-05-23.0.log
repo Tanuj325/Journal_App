@@ -1,0 +1,325 @@
+2026-05-23 16:13:19 [main] INFO  com.tanuj.Spring.Boot.Application - Starting Application using Java 26.0.1 with PID 972 (D:\Tanuj\Spring Boot\Spring-Boot\target\classes started by tanuj in D:\Tanuj\Spring Boot\Spring-Boot)
+2026-05-23 16:13:19 [main] INFO  com.tanuj.Spring.Boot.Application - The following 1 profile is active: "dev"
+2026-05-23 16:13:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-23 16:13:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 2 MongoDB repository interfaces.
+2026-05-23 16:13:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-23 16:13:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-23 16:13:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-23 16:13:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-23 16:13:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-23 16:13:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 881 ms
+2026-05-23 16:13:21 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/26.0.1+8-34"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='tanujpratapsingh08_db_user', source='test', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@306c7bf6, com.mongodb.Jep395RecordCodecProvider@664632e9, com.mongodb.KotlinCodecProvider@494c8f29]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.7zsqiuv.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2026-05-23 16:13:21 [cluster-ClusterId{value='6a1184c9f0d949655fcb64ac', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Exception while resolving SRV records
+com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'.
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:96)
+	at com.mongodb.internal.connection.DefaultDnsSrvRecordMonitor$DnsSrvRecordMonitorRunnable.run(DefaultDnsSrvRecordMonitor.java:80)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+Caused by: com.mongodb.spi.dns.DnsWithResponseCodeException: DNS name not found [response code 3]
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:52)
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:78)
+	... 2 common frames omitted
+Caused by: javax.naming.NameNotFoundException: DNS name not found [response code 3]
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.checkResponseCode(DnsClient.java:785)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.isMatchResponse(DnsClient.java:703)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.doUdpQuery(DnsClient.java:511)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.query(DnsClient.java:259)
+	at jdk.naming.dns/com.sun.jndi.dns.Resolver.query(Resolver.java:81)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsContext.c_getAttributes(DnsContext.java:434)
+	at java.naming/com.sun.jndi.toolkit.ctx.ComponentDirContext.p_getAttributes(ComponentDirContext.java:235)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:141)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:129)
+	at java.naming/javax.naming.directory.InitialDirContext.getAttributes(InitialDirContext.java:171)
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:41)
+	... 3 common frames omitted
+2026-05-23 16:13:22 [main] INFO  org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, srvResolutionException=com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'., connectionMode=MULTIPLE, serverDescriptions=[]}. Waiting for 30000 ms before timing out
+2026-05-23 16:13:32 [cluster-ClusterId{value='6a1184c9f0d949655fcb64ac', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Exception while resolving SRV records
+com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'.
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:96)
+	at com.mongodb.internal.connection.DefaultDnsSrvRecordMonitor$DnsSrvRecordMonitorRunnable.run(DefaultDnsSrvRecordMonitor.java:80)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+Caused by: com.mongodb.spi.dns.DnsWithResponseCodeException: DNS name not found [response code 3]
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:52)
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:78)
+	... 2 common frames omitted
+Caused by: javax.naming.NameNotFoundException: DNS name not found [response code 3]
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.checkResponseCode(DnsClient.java:785)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.isMatchResponse(DnsClient.java:703)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.doUdpQuery(DnsClient.java:511)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.query(DnsClient.java:259)
+	at jdk.naming.dns/com.sun.jndi.dns.Resolver.query(Resolver.java:81)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsContext.c_getAttributes(DnsContext.java:434)
+	at java.naming/com.sun.jndi.toolkit.ctx.ComponentDirContext.p_getAttributes(ComponentDirContext.java:235)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:141)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:129)
+	at java.naming/javax.naming.directory.InitialDirContext.getAttributes(InitialDirContext.java:171)
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:41)
+	... 3 common frames omitted
+2026-05-23 16:13:42 [cluster-ClusterId{value='6a1184c9f0d949655fcb64ac', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Exception while resolving SRV records
+com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'.
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:96)
+	at com.mongodb.internal.connection.DefaultDnsSrvRecordMonitor$DnsSrvRecordMonitorRunnable.run(DefaultDnsSrvRecordMonitor.java:80)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+Caused by: com.mongodb.spi.dns.DnsWithResponseCodeException: DNS name not found [response code 3]
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:52)
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:78)
+	... 2 common frames omitted
+Caused by: javax.naming.NameNotFoundException: DNS name not found [response code 3]
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.checkResponseCode(DnsClient.java:785)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.isMatchResponse(DnsClient.java:703)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.doUdpQuery(DnsClient.java:511)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.query(DnsClient.java:259)
+	at jdk.naming.dns/com.sun.jndi.dns.Resolver.query(Resolver.java:81)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsContext.c_getAttributes(DnsContext.java:434)
+	at java.naming/com.sun.jndi.toolkit.ctx.ComponentDirContext.p_getAttributes(ComponentDirContext.java:235)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:141)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:129)
+	at java.naming/javax.naming.directory.InitialDirContext.getAttributes(InitialDirContext.java:171)
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:41)
+	... 3 common frames omitted
+2026-05-23 16:13:52 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'springSecurity': Unsatisfied dependency expressed through field 'userDetailServiceImplementation': Error creating bean with name 'userDetailServiceImplementation': Unsatisfied dependency expressed through field 'userRepository': Error creating bean with name 'userRepository' defined in com.tanuj.Spring.Boot.repository.UserRepository defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+2026-05-23 16:20:45 [main] INFO  com.tanuj.Spring.Boot.Application - Starting Application using Java 21.0.11 with PID 9732 (D:\Tanuj\Spring Boot\Spring-Boot\target\classes started by tanuj in D:\Tanuj\Spring Boot\Spring-Boot)
+2026-05-23 16:20:45 [main] INFO  com.tanuj.Spring.Boot.Application - The following 1 profile is active: "dev"
+2026-05-23 16:20:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-23 16:20:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 2 MongoDB repository interfaces.
+2026-05-23 16:20:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-23 16:20:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-23 16:20:46 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-23 16:20:46 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-23 16:20:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-23 16:20:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1116 ms
+2026-05-23 16:20:46 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/21.0.11+10-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='tanujpratapsingh08_db_user', source='test', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@33d60b7e, com.mongodb.Jep395RecordCodecProvider@1fecfaea, com.mongodb.KotlinCodecProvider@4872669f]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.7zsqiuv.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2026-05-23 16:20:47 [cluster-ClusterId{value='6a1186861b94605649048ee4', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Exception while resolving SRV records
+com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'.
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:96)
+	at com.mongodb.internal.connection.DefaultDnsSrvRecordMonitor$DnsSrvRecordMonitorRunnable.run(DefaultDnsSrvRecordMonitor.java:80)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mongodb.spi.dns.DnsWithResponseCodeException: DNS name not found [response code 3]
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:52)
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:78)
+	... 2 common frames omitted
+Caused by: javax.naming.NameNotFoundException: DNS name not found [response code 3]
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.checkResponseCode(DnsClient.java:785)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.isMatchResponse(DnsClient.java:703)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.doUdpQuery(DnsClient.java:511)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.query(DnsClient.java:259)
+	at jdk.naming.dns/com.sun.jndi.dns.Resolver.query(Resolver.java:81)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsContext.c_getAttributes(DnsContext.java:434)
+	at java.naming/com.sun.jndi.toolkit.ctx.ComponentDirContext.p_getAttributes(ComponentDirContext.java:235)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:141)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:129)
+	at java.naming/javax.naming.directory.InitialDirContext.getAttributes(InitialDirContext.java:171)
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:41)
+	... 3 common frames omitted
+2026-05-23 16:20:47 [main] INFO  org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, srvResolutionException=com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'., connectionMode=MULTIPLE, serverDescriptions=[]}. Waiting for 30000 ms before timing out
+2026-05-23 16:20:57 [cluster-ClusterId{value='6a1186861b94605649048ee4', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Exception while resolving SRV records
+com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'.
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:96)
+	at com.mongodb.internal.connection.DefaultDnsSrvRecordMonitor$DnsSrvRecordMonitorRunnable.run(DefaultDnsSrvRecordMonitor.java:80)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mongodb.spi.dns.DnsWithResponseCodeException: DNS name not found [response code 3]
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:52)
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:78)
+	... 2 common frames omitted
+Caused by: javax.naming.NameNotFoundException: DNS name not found [response code 3]
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.checkResponseCode(DnsClient.java:785)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.isMatchResponse(DnsClient.java:703)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.doUdpQuery(DnsClient.java:511)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.query(DnsClient.java:259)
+	at jdk.naming.dns/com.sun.jndi.dns.Resolver.query(Resolver.java:81)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsContext.c_getAttributes(DnsContext.java:434)
+	at java.naming/com.sun.jndi.toolkit.ctx.ComponentDirContext.p_getAttributes(ComponentDirContext.java:235)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:141)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:129)
+	at java.naming/javax.naming.directory.InitialDirContext.getAttributes(InitialDirContext.java:171)
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:41)
+	... 3 common frames omitted
+2026-05-23 16:21:07 [cluster-ClusterId{value='6a1186861b94605649048ee4', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Exception while resolving SRV records
+com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'.
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:96)
+	at com.mongodb.internal.connection.DefaultDnsSrvRecordMonitor$DnsSrvRecordMonitorRunnable.run(DefaultDnsSrvRecordMonitor.java:80)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mongodb.spi.dns.DnsWithResponseCodeException: DNS name not found [response code 3]
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:52)
+	at com.mongodb.internal.dns.DefaultDnsResolver.resolveHostFromSrvRecords(DefaultDnsResolver.java:78)
+	... 2 common frames omitted
+Caused by: javax.naming.NameNotFoundException: DNS name not found [response code 3]
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.checkResponseCode(DnsClient.java:785)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.isMatchResponse(DnsClient.java:703)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.doUdpQuery(DnsClient.java:511)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsClient.query(DnsClient.java:259)
+	at jdk.naming.dns/com.sun.jndi.dns.Resolver.query(Resolver.java:81)
+	at jdk.naming.dns/com.sun.jndi.dns.DnsContext.c_getAttributes(DnsContext.java:434)
+	at java.naming/com.sun.jndi.toolkit.ctx.ComponentDirContext.p_getAttributes(ComponentDirContext.java:235)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:141)
+	at java.naming/com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:129)
+	at java.naming/javax.naming.directory.InitialDirContext.getAttributes(InitialDirContext.java:171)
+	at com.mongodb.internal.dns.JndiDnsClient.getResourceRecordData(JndiDnsClient.java:41)
+	... 3 common frames omitted
+2026-05-23 16:21:17 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'springSecurity': Unsatisfied dependency expressed through field 'userDetailServiceImplementation': Error creating bean with name 'userDetailServiceImplementation': Unsatisfied dependency expressed through field 'userRepository': Error creating bean with name 'userRepository' defined in com.tanuj.Spring.Boot.repository.UserRepository defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+2026-05-23 16:21:17 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-05-23 16:21:17 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-23 16:21:17 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'springSecurity': Unsatisfied dependency expressed through field 'userDetailServiceImplementation': Error creating bean with name 'userDetailServiceImplementation': Unsatisfied dependency expressed through field 'userRepository': Error creating bean with name 'userRepository' defined in com.tanuj.Spring.Boot.repository.UserRepository defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.tanuj.Spring.Boot.Application.main(Application.java:16)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailServiceImplementation': Unsatisfied dependency expressed through field 'userRepository': Error creating bean with name 'userRepository' defined in com.tanuj.Spring.Boot.repository.UserRepository defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.tanuj.Spring.Boot.repository.UserRepository defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1685)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDatabaseFactoryDependentConfiguration.class]: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception with message: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, srvResolutionException=com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'., servers=[]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception with message: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, srvResolutionException=com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'., servers=[]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 57 common frames omitted
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, srvResolutionException=com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'., servers=[]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:88)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3002)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:603)
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.execute(DefaultIndexOperations.java:215)
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.ensureIndex(DefaultIndexOperations.java:119)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:153)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForAndCreateIndexes(MongoPersistentEntityIndexCreator.java:143)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForIndexes(MongoPersistentEntityIndexCreator.java:127)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.<init>(MongoPersistentEntityIndexCreator.java:96)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.<init>(MongoPersistentEntityIndexCreator.java:73)
+	at org.springframework.data.mongodb.core.MongoTemplate.<init>(MongoTemplate.java:263)
+	at org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration.mongoTemplate(MongoDatabaseFactoryDependentConfiguration.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 58 common frames omitted
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, srvResolutionException=com.mongodb.MongoConfigurationException: Failed looking up SRV record for '_mongodb._tcp.cluster0.7zsqiuv.mongodb.net'., servers=[]
+	at com.mongodb.internal.connection.BaseCluster.createTimeoutException(BaseCluster.java:380)
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:125)
+	at com.mongodb.internal.connection.AbstractMultiServerCluster.selectServer(AbstractMultiServerCluster.java:54)
+	at com.mongodb.internal.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:134)
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:128)
+	at com.mongodb.client.internal.ClientSessionBinding.getWriteConnectionSource(ClientSessionBinding.java:102)
+	at com.mongodb.internal.operation.SyncOperationHelper.withConnection(SyncOperationHelper.java:106)
+	at com.mongodb.internal.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:129)
+	at com.mongodb.internal.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:68)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:173)
+	at com.mongodb.client.internal.MongoCollectionImpl.executeCreateIndexes(MongoCollectionImpl.java:913)
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndexes(MongoCollectionImpl.java:896)
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndexes(MongoCollectionImpl.java:891)
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndex(MongoCollectionImpl.java:876)
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.lambda$ensureIndex$0(DefaultIndexOperations.java:129)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:601)
+	... 70 common frames omitted
+2026-05-23 16:30:36 [main] INFO  com.tanuj.Spring.Boot.Application - Starting Application using Java 21.0.11 with PID 19348 (D:\Tanuj\Spring Boot\Spring-Boot\target\classes started by tanuj in D:\Tanuj\Spring Boot\Spring-Boot)
+2026-05-23 16:30:36 [main] INFO  com.tanuj.Spring.Boot.Application - The following 1 profile is active: "dev"
+2026-05-23 16:30:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-23 16:30:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 2 MongoDB repository interfaces.
+2026-05-23 16:30:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-23 16:30:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-23 16:30:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-23 16:30:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-23 16:30:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-23 16:30:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1442 ms
+2026-05-23 16:30:38 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/21.0.11+10-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='tanujpratapsingh08_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@483f286e, com.mongodb.Jep395RecordCodecProvider@4bb147ec, com.mongodb.KotlinCodecProvider@33f2cfda]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.7zsqiuv.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-bc7sz8-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2026-05-23 16:30:38 [cluster-ClusterId{value='6a1188d688671104b6c2ab87', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017 to client view of cluster
+2026-05-23 16:30:38 [cluster-ClusterId{value='6a1188d688671104b6c2ab87', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017 to client view of cluster
+2026-05-23 16:30:38 [cluster-ClusterId{value='6a1188d688671104b6c2ab87', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017 to client view of cluster
+2026-05-23 16:30:38 [main] INFO  org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2026-05-23 16:30:39 [cluster-ClusterId{value='6a1188d688671104b6c2ab87', description='null'}-ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=582300600, setName='atlas-bc7sz8-shard-0', canonicalAddress=ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, hosts=[ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017], passives=[], arbiters=[], primary='ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000002c7, setVersion=195, topologyVersion=TopologyVersion{processId=6a0c8d89f5ae275711dc1b51, counter=6}, lastWriteDate=Sat May 23 16:30:32 IST 2026, lastUpdateTimeNanos=5139610229300}
+2026-05-23 16:30:39 [cluster-ClusterId{value='6a1188d688671104b6c2ab87', description='null'}-ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017 with max election id 7fffffff00000000000002c7 and max set version 195
+2026-05-23 16:30:39 [cluster-ClusterId{value='6a1188d688671104b6c2ab87', description='null'}-ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=600488600, setName='atlas-bc7sz8-shard-0', canonicalAddress=ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017, hosts=[ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017], passives=[], arbiters=[], primary='ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=195, topologyVersion=TopologyVersion{processId=6a0c8b14dbc69cec59ccf8b1, counter=4}, lastWriteDate=Sat May 23 16:30:32 IST 2026, lastUpdateTimeNanos=5139627859800}
+2026-05-23 16:30:39 [cluster-ClusterId{value='6a1188d688671104b6c2ab87', description='null'}-ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=590312500, setName='atlas-bc7sz8-shard-0', canonicalAddress=ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, hosts=[ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017], passives=[], arbiters=[], primary='ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=195, topologyVersion=TopologyVersion{processId=6a0c90127be274748699dfba, counter=3}, lastWriteDate=Sat May 23 16:30:32 IST 2026, lastUpdateTimeNanos=5139628932400}
+2026-05-23 16:30:41 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5df64b2a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7afb9c93, org.springframework.security.web.context.SecurityContextHolderFilter@25fd6d1e, org.springframework.security.web.header.HeaderWriterFilter@66715ca9, org.springframework.web.filter.CorsFilter@30d15e4a, org.springframework.security.web.authentication.logout.LogoutFilter@697a92af, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@485deee1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c11332b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e5e6573, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43a7203e, org.springframework.security.web.session.SessionManagementFilter@39a7eca5, org.springframework.security.web.access.ExceptionTranslationFilter@1209a0f, org.springframework.security.web.access.intercept.AuthorizationFilter@382faf51]
+2026-05-23 16:30:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-05-23 16:30:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-05-23 16:30:41 [main] INFO  com.tanuj.Spring.Boot.Application - Started Application in 5.576 seconds (process running for 6.07)
+2026-05-23 16:31:49 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-23 16:31:49 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-23 16:31:49 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-05-23 16:43:08 [main] INFO  com.tanuj.Spring.Boot.Application - Starting Application using Java 21.0.11 with PID 3824 (D:\Tanuj\Spring Boot\Spring-Boot\target\classes started by tanuj in D:\Tanuj\Spring Boot\Spring-Boot)
+2026-05-23 16:43:08 [main] INFO  com.tanuj.Spring.Boot.Application - The following 1 profile is active: "dev"
+2026-05-23 16:43:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-23 16:43:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 2 MongoDB repository interfaces.
+2026-05-23 16:43:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-23 16:43:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-05-23 16:43:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-23 16:43:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-23 16:43:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-23 16:43:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1542 ms
+2026-05-23 16:43:10 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Eclipse Adoptium/21.0.11+10-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='tanujpratapsingh08_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@2ac519dc, com.mongodb.Jep395RecordCodecProvider@3d53e6f7, com.mongodb.KotlinCodecProvider@1de4bee0]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.7zsqiuv.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-bc7sz8-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2026-05-23 16:43:10 [cluster-ClusterId{value='6a118bc6d6b4a43ff9246f20', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017 to client view of cluster
+2026-05-23 16:43:10 [cluster-ClusterId{value='6a118bc6d6b4a43ff9246f20', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017 to client view of cluster
+2026-05-23 16:43:10 [cluster-ClusterId{value='6a118bc6d6b4a43ff9246f20', description='null'}-srv-cluster0.7zsqiuv.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017 to client view of cluster
+2026-05-23 16:43:11 [main] INFO  org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2026-05-23 16:43:11 [cluster-ClusterId{value='6a118bc6d6b4a43ff9246f20', description='null'}-ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=777311000, setName='atlas-bc7sz8-shard-0', canonicalAddress=ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017, hosts=[ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017], passives=[], arbiters=[], primary='ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=195, topologyVersion=TopologyVersion{processId=6a0c8b14dbc69cec59ccf8b1, counter=4}, lastWriteDate=Sat May 23 16:43:04 IST 2026, lastUpdateTimeNanos=5891866745100}
+2026-05-23 16:43:11 [cluster-ClusterId{value='6a118bc6d6b4a43ff9246f20', description='null'}-ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=777052200, setName='atlas-bc7sz8-shard-0', canonicalAddress=ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, hosts=[ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017], passives=[], arbiters=[], primary='ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=195, topologyVersion=TopologyVersion{processId=6a0c90127be274748699dfba, counter=3}, lastWriteDate=Sat May 23 16:43:04 IST 2026, lastUpdateTimeNanos=5891866494700}
+2026-05-23 16:43:11 [cluster-ClusterId{value='6a118bc6d6b4a43ff9246f20', description='null'}-ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=772597100, setName='atlas-bc7sz8-shard-0', canonicalAddress=ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, hosts=[ac-ipildno-shard-00-02.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017, ac-ipildno-shard-00-00.7zsqiuv.mongodb.net:27017], passives=[], arbiters=[], primary='ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff00000000000002c7, setVersion=195, topologyVersion=TopologyVersion{processId=6a0c8d89f5ae275711dc1b51, counter=6}, lastWriteDate=Sat May 23 16:43:04 IST 2026, lastUpdateTimeNanos=5891866542600}
+2026-05-23 16:43:11 [cluster-ClusterId{value='6a118bc6d6b4a43ff9246f20', description='null'}-ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-ipildno-shard-00-01.7zsqiuv.mongodb.net:27017 with max election id 7fffffff00000000000002c7 and max set version 195
+2026-05-23 16:43:13 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18c820d2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d3930fe, org.springframework.security.web.context.SecurityContextHolderFilter@595814a1, org.springframework.security.web.header.HeaderWriterFilter@78545d40, org.springframework.web.filter.CorsFilter@5e51ec2e, org.springframework.security.web.authentication.logout.LogoutFilter@41143873, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f6b57f2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49d42faf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4948daec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15f2a43f, org.springframework.security.web.session.SessionManagementFilter@2d913116, org.springframework.security.web.access.ExceptionTranslationFilter@2bc16fe2, org.springframework.security.web.access.intercept.AuthorizationFilter@7956f93a]
+2026-05-23 16:43:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-05-23 16:43:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-05-23 16:43:13 [main] INFO  com.tanuj.Spring.Boot.Application - Started Application in 5.837 seconds (process running for 6.419)
+2026-05-23 16:43:43 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-23 16:43:43 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-23 16:43:43 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-05-23 16:47:25 [http-nio-8080-exec-9] INFO  c.t.Spring.Boot.service.UserService - Info Occurred for null
+2026-05-23 16:47:25 [http-nio-8080-exec-9] WARN  c.t.Spring.Boot.service.UserService - Warning Occurred for null
+2026-05-23 16:47:25 [http-nio-8080-exec-9] ERROR c.t.Spring.Boot.service.UserService - Error Occurred for null
