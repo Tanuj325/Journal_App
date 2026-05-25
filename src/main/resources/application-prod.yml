@@ -3,6 +3,17 @@ spring:
     mongodb:
       uri: ${MONGO_URI}
       auto-index-creation: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${EMAIL_USERNAME}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
 weather:
   api:
