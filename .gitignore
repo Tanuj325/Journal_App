@@ -4,8 +4,8 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### YML FILES ###
-*.yml
+### SECRET FILES ###
+.env
 
 ### STS ###
 .apt_generated
