@@ -1,5 +1,6 @@
 package com.tanuj.Spring.Boot.entity;
 
+import com.tanuj.Spring.Boot.enums.Sentiment;
 import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -16,4 +17,5 @@ public class JournalEntry {
     private String title;
     private String content;
     private LocalDateTime date;
+    private Sentiment sentiment;
 }
