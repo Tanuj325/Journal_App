@@ -1,6 +1,7 @@
 package com.tanuj.Spring.Boot.service;
 
 import com.tanuj.Spring.Boot.api_response.WeatherResponse;
+import com.tanuj.Spring.Boot.cache.AppCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -12,14 +13,15 @@ import org.springframework.web.client.RestTemplate;
 public class WeatherService {
     @Value("${weather.api.key}")
     private String apiKey;
-    private static final String API = "http://api.weatherstack.com/current?access_key=API_KEY&query=CITY";
 
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private AppCache appCache;
 
     public WeatherResponse getWeather(String city){
-        String finalAPI = API.replace("CITY",city).replace("API_KEY",apiKey);
+        String finalAPI = appCache.getAppCache().get("weather_api").replace("<city>",city).replace("<apiKey>",apiKey);
         ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, WeatherResponse.class);
         return response.getBody();
 
